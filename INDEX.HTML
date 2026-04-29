@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-    <title>Dicas de Fortnite - Meu Primeiro Site</title>
+    <meta charset="UTF-8">
+    <title>Dicas Fortnite - BRYAN</title>
     <style>
-        /* Estilo simples que qualquer iniciante entende */
+        /* SITE PRINCIPAL */
         body {
-            background-color: #2c3e50; /* Um azul escuro bonito */
+            background-color: #2c3e50;
             color: white;
             font-family: sans-serif;
             margin: 0;
-            padding: 0;
+            text-align: center;
         }
 
         .topo {
-            background-color: #8e44ad; /* Roxo Fortnite */
+            background-color: #8e44ad;
             padding: 20px;
-            text-align: center;
         }
 
         .minha-skin {
@@ -27,70 +27,128 @@
 
         .conteudo {
             width: 80%;
-            margin: 0 auto; /* Centraliza a caixa no meio da tela */
-            padding: 20px;
+            margin: 20px auto;
         }
 
-        .caixa-dica {
+        /* CAIXAS DE TÓPICOS */
+        .clique-aqui {
             background-color: #34495e;
-            border-left: 10px solid #f1c40f; /* Detalhe amarelo na esquerda */
-            padding: 15px;
+            border-left: 10px solid #f1c40f;
+            padding: 20px;
             margin-bottom: 20px;
             border-radius: 5px;
+            text-align: left;
+            cursor: pointer;
+            transition: 0.3s;
         }
 
-        h2 {
-            color: #f1c40f; /* Títulos em amarelo */
-            margin-top: 0;
+        .clique-aqui:hover {
+            background-color: #3e5871;
         }
 
-        p {
-            line-height: 1.5; /* Espaçamento entre linhas para ler melhor */
+        .amarelo {
+            color: #f1c40f;
+            font-size: 25px;
+            font-weight: bold;
         }
 
-        footer {
+        /* TELA DE ZUEIRA */
+        #tela-zueira {
+            display: none; 
+            background-color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            padding: 20px;
-            font-size: 14px;
-            color: #bdc3c7;
+        }
+
+        #tela-zueira h1 {
+            color: red;
+            font-size: 50px;
+            margin: 0;
+            animation: tremer 0.1s infinite;
+        }
+
+        @keyframes tremer {
+            0% { transform: translate(2px, 1px); }
+            50% { transform: translate(-1px, -2px); }
+            100% { transform: translate(1px, 2px); }
+        }
+
+        .botao-voltar {
+            margin-top: 30px;
+            padding: 15px 30px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
 
-    <div class="topo">
-        <h1>GUIA PARA VIRAR PRO PLAYER</h1>
-        <!-- Sua imagem que está na pasta -->
-        <img src="skin.webp" alt="Minha Skin Favorita" class="minha-skin">
+    <!-- TELA DA ZUEIRA -->
+    <div id="tela-zueira">
+        <div>
+            <h1>VOCÊ NUNCA VAI SER UM PRO PLAYER SEU BOT 67676767</h1>
+            <button class="botao-voltar" onclick="location.reload()">TENTAR NOVAMENTE</button>
+        </div>
     </div>
 
-    <div class="conteudo">
-        
-        <div class="caixa-dica">
-            <h2>1. Treine a Edição e Construção</h2>
-            <p>O maior diferencial do Fortnite é a construção. Entre em mapas de "Free Build" no modo criativo e pratique fazer 90 graus e editar paredes. Tente fazer isso rápido, mas sem errar os cliques.</p>
+    <!-- SITE PRINCIPAL -->
+    <div id="site-principal">
+        <div class="topo">
+            <h1>GUIA PARA VIRAR PRO PLAYER</h1>
+            <img src="skin.webp" alt="Minha Skin" class="minha-skin">
         </div>
 
-        <div class="caixa-dica">
-            <h2>2. Melhore sua Mira (Aim)</h2>
-            <p>Não adianta construir bem se você não acerta o tiro. Use mapas de treino de mira (Aim Trainers) dentro do jogo. Uma dica é sempre tentar manter a mira na altura da cabeça do adversário.</p>
+        <div class="conteudo">
+            
+            <div class="clique-aqui" onclick="ficarVermelho()">
+                <span class="amarelo">1. TREINE A EDIÇÃO</span>
+                <p>Clique aqui para ver os melhores mapas de Creative para edit!</p>
+            </div>
+
+            <div class="clique-aqui" onclick="ficarVermelho()">
+                <span class="amarelo">2. MELHORE A MIRA</span>
+                <p>O segredo da sensibilidade dos Pro Players revelado aqui.</p>
+            </div>
+
+            <div class="clique-aqui" onclick="ficarVermelho()">
+                <span class="amarelo">3. NOÇÃO DE JOGO (GAME SENSE)</span>
+                <p>Aprenda a hora certa de rotacionar e pegar o High Ground.</p>
+            </div>
+
+            <div class="clique-aqui" onclick="ficarVermelho()">
+                <span class="amarelo">4. CONFIGURAÇÕES DE VÍDEO</span>
+                <p>Como ganhar mais FPS e tirar o input lag do seu jogo.</p>
+            </div>
+
+            <div class="clique-aqui" onclick="ficarVermelho()">
+                <span class="amarelo">5. CONTROLE MENTAL</span>
+                <p>Não dê "rage"! Veja como manter a calma em finais de partida.</p>
+            </div>
+
         </div>
 
-        <div class="caixa-dica">
-            <h2>3. Use o Fone de Ouvido</h2>
-            <p>O som no Fortnite é tudo. Você precisa ouvir de onde vem os passos e os tiros. Ative também a opção "Visualizar Efeitos Sonoros" nas configurações para ver ícones de onde vem o barulho na tela.</p>
-        </div>
-
-        <div class="caixa-dica">
-            <h2>4. Jogue Campeonatos (Scrims)</h2>
-            <p>Para ser pro, você precisa jogar contra gente boa. Participe das Arenas e de torneios abertos. Mesmo que perca no começo, você vai ganhar muita experiência de jogo real.</p>
-        </div>
-
+        <footer style="margin-top: 50px; color: #bdc3c7;">
+            <p>Criado por BRYAN - 2026</p>
+        </footer>
     </div>
 
-    <footer>
-        <p>Criado por BRYAN no VS Code HTML - 2026</p>
-    </footer>
+    <script>
+        function ficarVermelho() {
+            document.getElementById('site-principal').style.display = 'none';
+            document.getElementById('tela-zueira').style.display = 'flex';
+        }
+    </script>
 
 </body>
 </html>
